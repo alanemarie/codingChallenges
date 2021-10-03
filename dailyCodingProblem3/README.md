@@ -21,7 +21,7 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 ## My comments:
 
 To serialize into a string, we can use pre, in, or post order (and
-the same method we use to serialize, we have to use to desserialize it.
+the same method we use to serialize, we have to use to desserialize it).
 
 The solution below is based in the one available in
 https://gist.github.com/folksilva/91cdbf958b3a496294f525c727676d2f
