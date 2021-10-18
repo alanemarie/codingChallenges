@@ -19,7 +19,7 @@ Time to create the hash: O(n)
 Check if there is some value of the hash that is in the hash.
 Time to check the hash: expected O(n) (because search operations in a hash are expected O(1)).
 
-* Tricky part *:
+[Tricky part]:
 
 If the k value is equal to the double of some value in the given list, the output will return wrong answer.
 For example, consider the list [1,2,3] and k=4. The algorithm will return 2 (because 2x2=4 and k-x (4-2) is a key in the hash table).
