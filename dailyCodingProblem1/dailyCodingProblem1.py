@@ -13,10 +13,13 @@
 
 def findSum(l, k):
     hash = {}
+    half = 0
 
     #time complexity: O(n)
     for x in l:
         hash[x] = k-x 
+        if(float(k-x) == k/2):
+            half += 1
 
     #this loop checks if the hash has some value that lies inside l
     #search operation in hash is expected O(1)
@@ -24,8 +27,9 @@ def findSum(l, k):
     #time complexity: expected O(n)
     for key in hash:
         if hash.get(key) in hash:
-            print(str(key)+ "+" +str(hash.get(key)))
-            return True
+            if((float(hash[key]) == k/2 and half >= 2) or hash[key] != k/2):
+                print(str(key)+ "+" +str(hash.get(key)))
+                return True
 
     return False
 
